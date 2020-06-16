@@ -11,15 +11,15 @@
     <div class="container-fluid">
     @foreach($articles as $a)
         <div class="row d-flex bg-white my-3 px-2 py-2">
-            <div class="w-25 px-2 py-2 text-center">
+            <div class="w-100 px-2 py-2 text-left d-block">
                 <a href="{{$a ->id}}">
                     <h2 class="">{{$a ->title}}</h2>
                 </a>
             </div>
-            <div class="px-4 py-3 d-block overflow-hidden" style="height: 150px; overflow-wrap:break-word;">
+            <div class="px-4 py-3 d-block w-100 overflow-hidden" style="min-height: 150px; max-height: 150px; overflow-wrap:break-word;">
                 {!! str_replace("\r","\n", $a ->body) !!} 
             </div>
-            <div class="px-4 py-3 text-right">
+            <div class="px-4 py-3 d-block text-right">
                 <a class="text-danger" href="/article/{{$a->id }}"> Read more ...</a>
             </div>
         </div>
