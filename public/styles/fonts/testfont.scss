@@ -1,0 +1,57 @@
+$gs : 'GoogleSans';
+$b : 'halflife';
+$an : 'ArialNova';
+
+@mixin an {
+    font-family: $an;
+}
+
+@mixin gs {
+    font-family: $gs;
+}
+@mixin b{
+    font-family: $b;
+}
+@mixin cond{
+    font-stretch: condensed;
+}
+@mixin bold{
+    font-weight: bold;
+}
+@mixin light {
+    font-weight: lighter;
+}
+@mixin italic{
+    font-style: italic;
+}
+
+@font-face{
+    font-family: $an;
+    src: url('ARIALNOVA.woff') format('woff');
+}
+
+@font-face{
+    font-family: $gs ;
+    src: url('productsans.woff') format('woff');
+}
+
+@font-face{
+    @include b;
+    src: url('bahnschrift.woff') format('woff');
+}
+
+h1, h2, h3, h4, h5{
+    @include b;
+    @include bold;
+}   
+
+p{
+    @include gs;
+    @include bold;
+}
+
+h6{
+    @include an;
+    @include light;
+}
+

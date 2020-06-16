@@ -1,0 +1,239 @@
+$header-text-col: rgba(255, 255, 255, 0.5) !important;
+$header-text-act: rgba(255, 255, 255, 0.75) !important;
+$no-bg: none !important;
+$trans-bg: transparent !important;
+$gs : 'GoogleSans';
+$b : 'halflife';
+$an : 'ArialNova';
+
+
+// font faces
+@mixin an {
+    font-family: $an;
+}
+
+@mixin gs {
+    font-family: $gs;
+}
+@mixin b{
+    font-family: $b;
+}
+@mixin cond{
+    font-stretch: condensed;
+}
+@mixin bold{
+    font-weight: bold;
+}
+@mixin light {
+    font-weight: lighter;
+}
+@mixin italic{
+    font-style: italic;
+}
+
+@font-face{
+    font-family: $an;
+    src: url('fonts/ARIALNOVA.woff') format('woff');
+}
+
+@font-face{
+    font-family: $gs ;
+    src: url('fonts/productsans.woff') format('woff');
+}
+
+@font-face{
+    @include b;
+    src: url('fonts/bahnschrift.woff') format('woff');
+}
+//font faces end
+
+h1,h2,h3{
+    @include b;
+    font-weight: bold;
+}
+
+h4,h5,h6{
+    @include gs;
+    @include cond;
+    @include bold;
+}
+
+p{
+    @include gs;
+    font-weight: lighter;
+}
+
+.search-bg{
+    background-color: #DF4A59;
+  }
+
+.search-button{
+    color: $header-text-col;
+    background-color: #DF4A59;
+    transition: all 0.15s;
+    color: $header-text-col;
+    &:hover{
+        color: $header-text-act;
+        box-shadow: none !important;
+        background-color: #BD202F;
+        transform: scale(1.15);
+        background-color:  #BD202F;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &:active{
+        box-shadow: none !important;
+        &:focus{
+            color: $header-text-act;
+            box-shadow: none !important;
+            background-color: #BD202F;
+        }
+    }
+    &:focus{
+        color: $header-text-act;
+        box-shadow: none !important;
+        background-color: $no-bg;
+         background-color: #BD202F;
+    }
+}
+
+.search-input{
+    color: $header-text-col;
+    &:focus{
+        box-shadow: $no-bg;
+        color: $header-text-act;
+    }
+    &:focus-visible{
+        box-shadow: $header-text-act;
+    }
+    &::placeholder{
+        color: $header-text-col;
+    }
+    &:active{
+        box-shadow: $no-bg;
+    }
+}
+
+.carousel-banner{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    max-height: 450px;
+    background: whitesmoke;
+    >div{
+        height: inherit;
+        max-height: inherit;
+        >div{
+            height: inherit;
+            max-height: inherit;
+            img{
+                object-fit: cover;
+                height: inherit;
+                max-height: inherit;
+            }
+        }
+    }
+}
+
+.carousel-caption{
+    right: unset;
+    left: unset;
+    bottom: 0;
+    padding: 25px 25px 25px 100px;
+}
+.carousel-pointer-overlap{
+    z-index: 10;
+    width: 5%;
+}
+
+.imagehead-container{
+    height: inherit;
+    max-height: inherit;
+    z-index: 10;
+    &::after{
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        box-shadow: 0px -100px 500px 0px black inset;
+        transition: 0.75s;
+    }
+    &:hover{
+        &::after{
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            transition: 0.75s;
+            box-shadow: unset;
+        }
+    }
+}
+
+.nav-link-zoom{
+    transition: all 0.15s;
+    &:hover{
+        transform: scale(1.15);
+        background-color:  #BD202F;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+footer{
+    color: white;
+    & h3{
+        color: white !important;
+    }
+}
+
+.footer-contact{
+    list-style-type: none;
+    >li{
+        display: inline;
+    }
+}
+
+.footer-cr{
+    background-color: #BD202F;
+}
+
+figcaption{
+    @include an;
+    @include italic;
+}
+
+.clickable{
+   color: black !important;
+   position: absolute;
+   z-index: 10;
+    &:hover{
+        color: black;
+    }
+}
+
+.article-bg{
+    background-color: #f3f3f3;
+}
+
+a{
+    &:hover{
+        text-decoration: underline black;
+    }
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: black !important;
+}
+
+nav{
+    @include gs;
+    >a{
+        color: white !important;
+    }
+}

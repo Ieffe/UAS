@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "ArialNova";
+  src: url("ARIALNOVA.woff") format("woff");
+}
+@font-face {
+  font-family: "GoogleSans";
+  src: url("productsans.woff") format("woff");
+}
+@font-face {
+  font-family: "halflife";
+  src: url("bahnschrift.woff") format("woff");
+}
+h1, h2, h3, h4, h5 {
+  font-family: "halflife";
+  font-weight: bold;
+}
+
+p {
+  font-family: "GoogleSans";
+  font-weight: bold;
+}
+
+h6 {
+  font-family: "ArialNova";
+  font-weight: lighter;
+}
+
+/*# sourceMappingURL=testfont.css.map */
