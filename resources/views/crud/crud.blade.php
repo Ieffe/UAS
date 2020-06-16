@@ -35,5 +35,9 @@
                 </div>
             </div>
         </div>
+        <div class="bg-danger">
+            {{$articles ->links()}}
+        </div>
+        
 </div>		
 @include('include.footer')

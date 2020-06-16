@@ -1,7 +1,6 @@
 <div class="col 3 py-3">
             <h3>Read Other</h3>
             <!-- repeat anything here -->
-            @foreach($sidebar as $s)
                 <div class="row my-4" style="max-height: 75px;">
                     <div
                     class="overflow-hidden col-3 pr-0" 
@@ -21,10 +20,9 @@
                     </div>
                     
                     <div class="col-7 overflow-hidden" style="text-overflow: clip; max-height: inherit;">
-                        <a class="clickable" style="max-height: 75px;" href="/article/{{$a->id}}">
-                            <h6 class="" style="text-overflow: clip; overflow: hidden;">{{$a->id}}</h6>
+                        <a class="clickable" style="max-height: 75px;" href="#">
+                            <h6 class="" style="text-overflow: clip; overflow: hidden;">title</h6>
                         </a>
                     </div>
                 </div>    
-            @endforeach 
 </div>

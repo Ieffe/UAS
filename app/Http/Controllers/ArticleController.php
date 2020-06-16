@@ -12,7 +12,7 @@ class ArticleController extends Controller
     //CRUD Control
 
     public function index(){
-        $articles = Article::all();
+        $articles = Article::paginate(15);
 
         return view('crud.crud', ['articles' => $articles]);
     }

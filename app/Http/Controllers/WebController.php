@@ -8,23 +8,24 @@ use App\Article;
 
 class WebController extends Controller
 {
-        //sidebar
-        public function sidebar(){
-
-        }
-
         //Web Articles
         public function article($id){
             $articles = Article::find($id);
-            $articles = Article::all();
             return view('page-template.article', ['articles' => $articles]);
-            return view('includes.sidebar', ['sidebar' => $articles]);
-
         }//single articles
 
-        public function home($id, Request $request){
-            $articles = Article::all();
+        public function main(){
+            $articles = Article::paginate(15);
 
-            return view('home', ['articles' => $articles]);
+            return view('main', ['articles' => $articles]);
+        }//main page
+
+        public function search(Request $request){
+            $search = $request->search; //search data
+            $articles = Article::where('title','like','%{$search$}')->get();
+
+            return view('main', ['articles' => $articles]);
         }
+    
+        
 }

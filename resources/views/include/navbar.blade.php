@@ -8,7 +8,7 @@
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <ul class="navbar-nav mx-auto text-center">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-zoom" href="/home">Home</a>
+                    <a class="nav-link nav-link-zoom" href="/">Home</a>
                 </li>
             </ul>
         </div>
@@ -19,13 +19,13 @@
             </div>
         </div>
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav mx-auto text-center">
+            <!-- <ul class="navbar-nav mx-auto text-center">
                 <li class="nav-item">
                     <a class="nav-link nav-link-zoom" href="#">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-zoom" href="#">Sign Up</a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </nav>

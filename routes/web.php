@@ -14,24 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Testing page
-Route::get('/blade', function () {
-    return view('welcome');
-});
-Route::get('/article', function () {
-    return view('page-template.article');
-});
-Route::get('/list', function () {
-    return view('page-template.lists');
-});
+// Route::get('/blade', function () {
+//     return view('welcome');
+// });
+// Route::get('/article', function () {
+//     return view('page-template.article');
+// });
+// Route::get('/list', function () {
+//     return view('page-template.lists');
+// });
 
 //For Home
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'WebController@main');
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', 'WebController@main');
 
 
 
@@ -45,19 +41,19 @@ Route::put('/crud/article/update/{id}','ArticleController@update');//remove arti
 
 //Front View
 Route::get('/article/{id}', 'WebController@article'); //readable article
+Route::get('/article/search', 'WebController@search'); //search
 
 
 
 
+// Auth::routes();
 
-Auth::routes();
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Auth::routes();
 
-Auth::routes();
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Auth::routes();
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

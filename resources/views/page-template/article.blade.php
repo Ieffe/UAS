@@ -10,19 +10,19 @@
 <div class="container">
     <div class="row shadow">
         <!-- article -->
-        <div class="col-9 article-bg mb-3" style="min-width:350px">
+        <div class="rticle-bg mb-3 p-5" style="min-width:350px">
             <!-- for image head -->
             <div class="my-3">
-                <div class="overflow-hidden" style="max-height:300px; height: 300px">
+                <!-- <div class="overflow-hidden" style="max-height:300px; height: 300px">
                     <img class="align-middle" 
                     style="object-fit:cover; 
                     width: 100%; 
                     height: 100%; 
                     object-position:center;" 
                     src="{{ asset('/images/texas.jpg') }}" alt="">
-                </div>
+                </div> -->
                 <!-- caption -->
-                <figcaption class="ml-3">croot</figcaption>
+                <!-- <figcaption class="ml-3">croot</figcaption> -->
             </div>
             
             <!-- paragraphs -->
@@ -31,7 +31,6 @@
             </div>
         </div>
         <!-- sidebar -->
-        @include('include.sidebar')
     </div>
 
 </div>
